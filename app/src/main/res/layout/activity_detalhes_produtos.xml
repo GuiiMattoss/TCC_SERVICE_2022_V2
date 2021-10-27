@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DetalhesProdutosActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:fillColor="#FFFFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:slideInterval="3000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                android:id="@+id/textTituloDetalhe"
+                style="@style/Edit_Text"
+                android:layout_marginTop="32dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Profissao"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/carouselView"
+                app:layout_constraintStart_toStartOf="@+id/carouselView"
+                app:layout_constraintTop_toBottomOf="@+id/carouselView" />
+
+            <TextView
+                android:id="@+id/textPrecoDetalhe"
+                style="@style/Edit_Text"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="R$"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textTituloDetalhe"
+                app:layout_constraintStart_toStartOf="@+id/textTituloDetalhe"
+                app:layout_constraintTop_toBottomOf="@+id/textTituloDetalhe" />
+
+            <TextView
+                android:id="@+id/textEstadoDetalhe"
+                style="@style/Edit_Text"
+                android:drawableLeft="@drawable/ic_local_blue_24"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="SP"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textPrecoDetalhe"
+                app:layout_constraintStart_toStartOf="@+id/textPrecoDetalhe"
+                app:layout_constraintTop_toBottomOf="@+id/textPrecoDetalhe" />
+
+            <TextView
+                android:id="@+id/textDescricaoDetalhe"
+                style="@style/Edit_Text"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Descricao"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textEstadoDetalhe"
+                app:layout_constraintStart_toStartOf="@+id/textEstadoDetalhe"
+                app:layout_constraintTop_toBottomOf="@+id/textEstadoDetalhe" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_whats"
+                style="@style/Button"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:onClick="vizualizarTelefone"
+                android:text="Entrar em contato"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textDescricaoDetalhe"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textDescricaoDetalhe"
+                app:layout_constraintTop_toBottomOf="@+id/textDescricaoDetalhe"
+                app:layout_constraintVertical_bias="0.193">
+
+
+            </androidx.appcompat.widget.AppCompatButton>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
